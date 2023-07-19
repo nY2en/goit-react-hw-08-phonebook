@@ -12,7 +12,7 @@ export const ContactForm = ({ toggle }) => {
     e.preventDefault();
 
     const form = e.currentTarget;
-    const name = form.name.value;
+    const name = form.name.value.trim();
     const phone = form.number.value;
     const isInContacts = contacts.some(el => el.name === name);
 

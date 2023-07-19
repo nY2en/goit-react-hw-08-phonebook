@@ -1,7 +1,7 @@
 import { toast } from 'react-toastify';
 
-export const success = (text) =>
-  toast.success(text, {
+export const success = text =>
+  toast.success(`${text}`, {
     position: 'top-right',
     autoClose: 5000,
     hideProgressBar: false,
@@ -9,7 +9,7 @@ export const success = (text) =>
     pauseOnHover: true,
     draggable: true,
     progress: undefined,
-    theme: 'colored',
+    theme: 'light',
   });
 
 export const warning = name =>

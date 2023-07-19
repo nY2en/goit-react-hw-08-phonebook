@@ -3,6 +3,7 @@ import { selectVisibleContacts } from 'redux/selectors';
 import { fetchContacts } from 'redux/operations';
 import { useEffect } from 'react';
 import ContactListItem from 'components/ContactListItem';
+import { Ul } from './Contact.styled';
 
 export const ContactList = () => {
   const dispatch = useDispatch();
@@ -13,12 +14,10 @@ export const ContactList = () => {
   }, [dispatch]);
 
   return (
-    <ul>
+    <Ul>
       {visibleContacts.map(data => (
         <ContactListItem key={data.id} data={data} />
       ))}
-    </ul>
+    </Ul>
   );
 };
-
-
