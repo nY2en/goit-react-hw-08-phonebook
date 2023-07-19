@@ -2,10 +2,11 @@ import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/operations';
 import { useState } from 'react';
 import { ThreeDots } from 'react-loader-spinner';
-import { Li, Span, Button } from './ContactListItem.styled';
+import { Li } from './ContactListItem.styled';
+import { Button } from '@chakra-ui/react';
 
 const ContactListItem = ({ data }) => {
-  const { name, number, id } = data;
+  const { name, phone, id } = data;
 
   const dispatch = useDispatch();
 
@@ -13,9 +14,8 @@ const ContactListItem = ({ data }) => {
 
   return (
     <Li>
-      <Span></Span>
       <p>
-        {name}: {number}
+        {name}: {phone}
       </p>
       <Button
         type="button"
@@ -24,11 +24,12 @@ const ContactListItem = ({ data }) => {
           setIsDeleting(true);
         }}
         disabled={isDeleting}
+        colorScheme="blackAlpha"
       >
         {isDeleting ? (
           <ThreeDots
             height="10"
-            width="35"
+            width="42"
             radius="9"
             color="#ffffff"
             ariaLabel="three-dots-loading"

@@ -4,7 +4,7 @@ import { selectContacts } from 'redux/selectors';
 import { warning } from 'components/notify';
 import { FormGenerator } from 'components/FormGenerator';
 
-export const ContactForm = () => {
+export const ContactForm = ({ toggle }) => {
   const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
 
@@ -13,16 +13,17 @@ export const ContactForm = () => {
 
     const form = e.currentTarget;
     const name = form.name.value;
-    const number = form.number.value;
+    const phone = form.number.value;
     const isInContacts = contacts.some(el => el.name === name);
 
-    console.log(name);
     if (isInContacts) {
       warning(name);
 
       return;
     }
-    dispatch(addContact({ name, number }));
+    dispatch(addContact({ name, phone }));
+
+    toggle();
 
     form.reset();
   };
