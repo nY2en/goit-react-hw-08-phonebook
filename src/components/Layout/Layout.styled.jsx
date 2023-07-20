@@ -5,9 +5,14 @@ export const Header = styled.header`
   border-bottom: 3px solid #fff8;
 `;
 
-export const Div = styled.div`
+export const HeaderDiv = styled.div`
   display: flex;
   justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+`;
+
+export const MainDiv = styled.div`
   max-width: 1200px;
   margin: 0 auto;
 `;

@@ -15,7 +15,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <BrowserRouter basename="/goit-react-hw-08-phonebook">
       <ChakraProvider theme={theme}>
         <Provider store={store}>
@@ -24,5 +24,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </Provider>
       </ChakraProvider>
     </BrowserRouter>
-  </React.StrictMode>
+  // </React.StrictMode>
 );

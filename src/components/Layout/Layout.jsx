@@ -3,21 +3,23 @@ import { Suspense } from 'react';
 import { Navigation } from 'components/Navigation';
 import { UserMenu } from 'components/UserMenu';
 
-import { Header, Div } from './Layout.styled';
+import { Header, HeaderDiv, MainDiv } from './Layout.styled';
 
 export const Layout = () => {
   return (
     <>
       <Header>
-        <Div>
+        <HeaderDiv>
           <Navigation />
           <UserMenu />
-        </Div>
+        </HeaderDiv>
       </Header>
 
       <Suspense fallback={<div>Loading...</div>}>
         <main>
-          <Outlet />
+          <MainDiv>
+            <Outlet />
+          </MainDiv>
         </main>
       </Suspense>
 

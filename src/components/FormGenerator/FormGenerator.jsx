@@ -1,6 +1,33 @@
 import { H1, Form, Label, Inpt, Btn, P, Span } from './FormGenerator.styled';
 import { NavLink } from 'react-router-dom';
 
+import { useState } from 'react';
+import { InputGroup, InputRightElement, Button } from '@chakra-ui/react';
+
+const PasswordInput = () => {
+  const [show, setShow] = useState(false);
+  const handleClick = () => setShow(!show);
+
+  return (
+    <label>
+      Password
+      <InputGroup size="md">
+        <Inpt
+          pr="4.5rem"
+          type={show ? 'text' : 'password'}
+          name="password"
+          variant="flushed"
+        />
+        <InputRightElement width="4.5rem">
+          <Button size="xs" onClick={handleClick} colorScheme="blackAlpha">
+            {show ? 'Hide' : 'Show'}
+          </Button>
+        </InputRightElement>
+      </InputGroup>
+    </label>
+  );
+};
+
 export const FormGenerator = ({ type, onSubmit, onFilterChange }) => {
   if (type === 'login') {
     return (
@@ -13,8 +40,7 @@ export const FormGenerator = ({ type, onSubmit, onFilterChange }) => {
         </Label>
 
         <Label>
-          Password
-          <Inpt name="password" variant="flushed" />
+          <PasswordInput />
         </Label>
 
         <Btn colorScheme="blackAlpha" type="submit">
@@ -102,7 +128,7 @@ export const FormGenerator = ({ type, onSubmit, onFilterChange }) => {
 
   if (type === 'filter') {
     return (
-      <Form>
+      <Form style={{ margin: '40px auto' }}>
         <Label>
           Find contacts by name
           <Inpt type="text" variant="flushed" onChange={onFilterChange} />
