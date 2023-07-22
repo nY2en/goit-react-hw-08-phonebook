@@ -6,7 +6,7 @@ import { Li } from './ContactListItem.styled';
 import { Button } from '@chakra-ui/react';
 
 const ContactListItem = ({ data }) => {
-  const { name, phone, id } = data;
+  const { name, number, id } = data;
 
   const dispatch = useDispatch();
 
@@ -15,7 +15,7 @@ const ContactListItem = ({ data }) => {
   return (
     <Li>
       <p>
-        {name}: {phone}
+        {name}: {number}
       </p>
       <Button
         type="button"

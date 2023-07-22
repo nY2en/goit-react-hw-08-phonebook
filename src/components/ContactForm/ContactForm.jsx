@@ -13,7 +13,7 @@ export const ContactForm = ({ toggle }) => {
 
     const form = e.currentTarget;
     const name = form.name.value.trim();
-    const phone = form.number.value;
+    const number = form.number.value;
     const isInContacts = contacts.some(el => el.name === name);
 
     if (isInContacts) {
@@ -21,7 +21,7 @@ export const ContactForm = ({ toggle }) => {
 
       return;
     }
-    dispatch(addContact({ name, phone }));
+    dispatch(addContact({ name, number }));
 
     toggle();
 

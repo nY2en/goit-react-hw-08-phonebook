@@ -10,5 +10,5 @@ export const Div = styled.div`
 
 export const H1 = styled.h1`
   margin-left: 500px;
-  font-size: 32px;
+  font-size: 40px;
 `;

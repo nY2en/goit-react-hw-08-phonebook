@@ -31,7 +31,7 @@ const PasswordInput = () => {
 export const FormGenerator = ({ type, onSubmit, onFilterChange }) => {
   if (type === 'login') {
     return (
-      <Form autoComplete="off">
+      <Form autoComplete="off" onSubmit={onSubmit}>
         <H1>Welcome Back</H1>
 
         <Label>
@@ -59,7 +59,7 @@ export const FormGenerator = ({ type, onSubmit, onFilterChange }) => {
 
   if (type === 'register') {
     return (
-      <Form autoComplete="off">
+      <Form autoComplete="off" onSubmit={onSubmit}>
         <H1>Create an account</H1>
         <Label>
           Name
@@ -130,7 +130,7 @@ export const FormGenerator = ({ type, onSubmit, onFilterChange }) => {
     return (
       <Form style={{ margin: '40px auto' }}>
         <Label>
-          Find contacts by name
+          Find contact by name
           <Inpt type="text" variant="flushed" onChange={onFilterChange} />
         </Label>
       </Form>

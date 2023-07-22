@@ -30,8 +30,7 @@ export const Inpt = styled(Input)`
   font-size: 20px;
 
   &:focus-visible {
-    border-color: purple;
-    box-shadow: 0px 1px 0px 0px purple;
+    box-shadow: 0px 1px 0px 0px teal;
   }
 `;
 

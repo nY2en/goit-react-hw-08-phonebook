@@ -10,3 +10,9 @@ export const selectVisibleContacts = state =>
   selectContacts(state).filter(el =>
     el.name.toLowerCase().includes(selectFilterValue(state))
   );
+
+export const selectIsLoggedIn = state => state.auth.isLoggedIn;
+
+export const selectUser = state => state.auth.user;
+
+export const selectIsRefreshing = state => state.auth.isRefreshing;
