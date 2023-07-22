@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/operations';
-import { selectContacts } from 'redux/selectors';
+import { addContact } from 'redux/contactSlice/operations';
+import { selectContacts } from 'redux/contactSlice/selectors';
 import { warning } from 'components/notify';
 import { FormGenerator } from 'components/FormGenerator';
 
@@ -21,6 +21,7 @@ export const ContactForm = ({ toggle }) => {
 
       return;
     }
+
     dispatch(addContact({ name, number }));
 
     toggle();

@@ -1,6 +1,6 @@
-import { FormGenerator } from 'components/FormGenerator';
 import { useDispatch } from 'react-redux';
-import { registerUser } from 'redux/operations';
+import { registerUser } from 'redux/authSlice/operations';
+import { FormGenerator } from 'components/FormGenerator';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();

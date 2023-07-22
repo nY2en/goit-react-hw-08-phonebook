@@ -1,9 +1,9 @@
-import { useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/operations';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { deleteContact } from 'redux/contactSlice/operations';
+import { Button } from '@chakra-ui/react';
 import { ThreeDots } from 'react-loader-spinner';
 import { Li } from './ContactListItem.styled';
-import { Button } from '@chakra-ui/react';
 
 const ContactListItem = ({ data }) => {
   const { name, number, id } = data;

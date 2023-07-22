@@ -1,10 +1,10 @@
-import { ContactForm } from 'components/ContactForm';
-import { Filter } from 'components/Filter';
-import { Modal } from 'components/Modal';
-import { ContactList } from 'components/ContactList';
 import { useState } from 'react';
 import { Button } from '@chakra-ui/react';
 import { AddIcon } from '@chakra-ui/icons';
+import { ContactForm } from 'components/ContactForm';
+import { ContactList } from 'components/ContactList';
+import { Filter } from 'components/Filter';
+import { Modal } from 'components/Modal';
 import { Div, H1 } from './Contacts.styled';
 
 const Contacts = () => {

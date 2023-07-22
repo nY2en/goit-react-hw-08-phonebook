@@ -1,7 +1,7 @@
-import { H1, Form, Label, Inpt, Btn, P, Span } from './FormGenerator.styled';
-import { NavLink } from 'react-router-dom';
-
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { H1, Form, Label, Inpt, Btn, P, Span } from './FormGenerator.styled';
+
 import { InputGroup, InputRightElement, Button } from '@chakra-ui/react';
 
 const PasswordInput = () => {

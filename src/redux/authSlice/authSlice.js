@@ -4,7 +4,7 @@ import {
   logInUser,
   logOutUser,
   refreshUser,
-} from 'redux/operations';
+} from 'redux/authSlice/operations';
 
 export const authSlice = createSlice({
   name: 'auth',

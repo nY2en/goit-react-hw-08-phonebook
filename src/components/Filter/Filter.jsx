@@ -1,5 +1,5 @@
-import { FormGenerator } from 'components/FormGenerator';
 import { useDispatch } from 'react-redux';
+import { FormGenerator } from 'components/FormGenerator';
 import { write } from 'redux/filterSlice/filterSlice';
 
 export const Filter = () => {

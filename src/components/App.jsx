@@ -3,11 +3,11 @@ import { lazy, useEffect } from 'react';
 import { Layout } from 'components/Layout';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { refreshUser } from 'redux/operations';
+import { refreshUser } from 'redux/authSlice/operations';
+import { selectIsRefreshing } from 'redux/authSlice/selectors';
 
 import { RestrictedRoute } from './UserMenu/RestrictedRoute';
 import { PrivateRoute } from './UserMenu/PrivateRoute';
-import { selectIsRefreshing } from 'redux/selectors';
 
 const Contacts = lazy(() => import('pages/Contacts'));
 const Register = lazy(() => import('pages/Register'));

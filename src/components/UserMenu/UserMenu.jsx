@@ -1,9 +1,8 @@
 import { Button } from '@chakra-ui/react';
-import { Div, P } from './UserMenu.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectIsLoggedIn, selectUser } from 'redux/selectors';
-
-import { logOutUser } from 'redux/operations';
+import { logOutUser } from 'redux/authSlice/operations';
+import { selectIsLoggedIn, selectUser } from 'redux/authSlice/selectors';
+import { Div, P } from './UserMenu.styled';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
